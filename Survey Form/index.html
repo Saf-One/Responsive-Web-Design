@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Customer Satisfaction Survey</h1>
+    <p id="description">Please help us improve our service by filling out this short survey.</p>
+    
+    <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label id="email-label" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label id="number-label" for="number">Age:</label>
+        <input type="number" id="number" name="age" min="18" max="120" placeholder="Age" required>
+
+        <label for="dropdown">How did you hear about us?</label>
+        <select id="dropdown" name="referral">
+            <option value="">Select an option</option>
+            <option value="friends">Friends</option>
+            <option value="search">Search Engine</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="other">Other</option>
+        </select>
+
+        <fieldset>
+            <legend>Would you recommend our service to a friend?</legend>
+            <label><input type="radio" name="recommend" value="yes"> Yes</label>
+            <label><input type="radio" name="recommend" value="no"> No</label>
+            <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>What features do you like most? (Check all that apply)</legend>
+            <label><input type="checkbox" name="features" value="ui"> User Interface</label>
+            <label><input type="checkbox" name="features" value="performance"> Performance</label>
+            <label><input type="checkbox" name="features" value="support"> Customer Support</label>
+            <label><input type="checkbox" name="features" value="pricing"> Pricing</label>
+        </fieldset>
+
+        <label for="comments">Any additional comments?</label>
+        <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
